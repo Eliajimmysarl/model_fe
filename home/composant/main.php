@@ -9,11 +9,11 @@
         {
             $demande=$_GET['demande'];
 
-            if($demande=='ajouter_photo_agent')
+            if($demande=='ajout_un')
                 {
                     
                      //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/importer_photo/api/post_image.php'); 
+                    require_once('composant/ajout_un/model/ajout_un.php'); 
                 }
             else if($demande=='importer_agents')
                 {
