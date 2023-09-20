@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="main">
 			
-			&copy; 2023 <strong>SMaaS </strong> by <a href="http://ejsarl.com" target="_blank">EJ SARL</a>
+			&copy; 2023 <strong>Test </strong> by <a href="http://ejsarl.com" target="_blank">EJ SARL</a>
 		
 		</footer>
 

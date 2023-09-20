@@ -73,13 +73,13 @@
 				
 											
 				<li class="has-sub">
-					<a href="forms-main.html">
+					<a href="?page=ajouter_un">
 					<i class="fa fa-users"></i>
 						<span class="title">Modele</span>
 					</a>
 					<ul >
 						<li>
-							<a href="?page=ajouter">
+							<a href="?page=ajouter_un">
 								<span class="title">Ajouter</span>
 							</a>
 						</li>

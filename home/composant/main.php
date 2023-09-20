@@ -37,10 +37,10 @@
             $page=$_GET['page'];
 
            
-             if($page=='ajouter_agent')
+             if($page=='ajouter_un')
                 {
                     //Composant2 : recuperer la reponse de la demande
-                    require_once('composant/agent/ajout/api/get_parametres.php');
+                    require_once('composant/ajout_un/view/demande_ajout.php');
 
                    // require_once('composant/agent/ajout/ihm/demande_creation.php'); 
                 }

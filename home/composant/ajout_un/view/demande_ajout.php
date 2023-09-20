@@ -1,15 +1,19 @@
+<hr/>
+	<ol class="breadcrumb bc-3" >
 
-<hr /><ol class="breadcrumb bc-3" >
-	<li>
-		<a href="?home"><i class="fa fa-home"></i>Home</a>
-	</li>
-	<li>
-		<a href="?page=recuperer_modeles">Ajouter modele</a>
-	</li>
-	<li class="active">
-		<strong>Ajouter</strong>
-	</li>
-</ol>
+		<li>
+			<a href="?home"><i class="fa fa-home"></i>Home</a>
+		</li>
+
+		<li>
+			<a href="?page=recuperer_modeles">Ajouter modele</a>
+		</li>
+
+		<li class="active">
+			<strong>Ajouter</strong>
+		</li>
+
+	</ol>
 
 <div class="row">
 			
@@ -23,8 +27,6 @@
 									
 				</div>
 								
-				       
-
 			</div>
 					
 			<div class="panel-body">
@@ -35,36 +37,40 @@
 						<label class="col-sm-3 control-label" >Text <abbr style="color:green; font-size:15px;">**</abbr></label>
 							<div class="col-sm-5">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<input type="text" name="text" class="form-control" placeholder="Prenom" required="required">
+									<span class="input-group-addon"><i class="entypo-pencil"></i></span>
+									
+									<input type="text" name="text" class="form-control" placeholder="Text" required="required">
+									
 									<span class="input-group-addon"><i class="r"></i></span>
 								</div>
 							</div>
 					</div>
 
-					
-
 					<div class="form-group">		
 						<label class="col-sm-3 control-label">select <abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="entypo-user"></i></span>
+									<span class="input-group-addon"><i class="entypo-pencil"></i></span>
+									
 									<select  name="sexe" id="monselect"  class="form-control" required="required">
-									<option value="" selected>Select</option>
+										<option value="" selected>Select</option>
 										<option value="select1">select1</option>
 										<option value="select2">select2</option>
                                     </select>
+
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
-					   </div>
+					</div>
 
-                       <div class="form-group">		
+                    <div class="form-group">		
 						<label class="col-sm-3 control-label">Date <abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<span class="input-group-addon"><i class="entypo-calendar"></i></span>
+
 									<input type="date" name="date" class="form-control" placeholder=" date" required="required">
+									
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
@@ -75,42 +81,47 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-phone"></i></span>
+									
 									<input type="text" name="telephone" id=numero class="form-control" placeholder=" Numero de telephone" required="required">
+									
 									<span style='' id=avnum> </span>
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
 					</div>
                     
-
 					<div class="form-group">		
 						<label class="col-sm-3 control-label">E-mail <abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-mail"></i></span>
+									
 									<input type="email" name="email" class="form-control" placeholder=" email@gmail.com" required="required">
+									
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
 					</div>
 					            
-					<div class="form-group">	
-							    	
+					<div class="form-group">		    	
 						<label class="col-sm-3 control-label">Mot de passe <abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-key"></i></span>
-									<div>
-                                <span id="msg"></span>
-								</div>
+							        <div>
+                                 		<span id="msg"></span>
+							        </div>
+
 									<input type="password" name="password"  id=mdp  class="form-control" placeholder=" mot de passe" required="required">
+									
 									<span class="input-group-addon"></span>
 								</div>
+									<div style='text-align:left;'>
+									
+										<input type="checkbox" onclick="voirpass()"> Afficher le mot de passe
+									
+									</div>
 							</div>
-
-							<div style='text-align:left;'>
-						    	    <input type="checkbox" onclick="voirpass()"> Afficher le mot de passe
-					    	</div>
 					</div>
 
 					<div class="form-group">		
@@ -118,35 +129,46 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-key"></i></span>
+
 									<input type="password" name="confirmPassword" id="confirmerpassword" class="form-control" placeholder=" confirmer le mot depasse" required="required">
+									
 									<span class="input-group-addon"></span>
 									<div id="cmp"></div>
 								</div>
-							</div>
-							
+							</div>							
 					</div>
 
 
                  
 
-                        <div class="form-group"> 
-                            <div class="col-sm-offset-3 col-sm-5"> 
+                    <div class="form-group"> 
+						<label class="col-sm-3 control-label">Choix <abbr style="color:green; font-size:15px;">**</abbr></label>	
+
+                            <div class=" col-sm-5"> 
                                 <div class="radio"> 
-                                    <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Radio Input 1
-                             </label> 
-                        </div>
-                        <div class="radio">
-                            <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio Input 2
-                          </label>   
-                          </div> 
-                         </div>
-                         </div>
+									<label>
+											
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="choix 2" checked="">choix 1
+								
+									</label> 
+                                </div>
+
+                        		<div class="radio">
+									<label>
+
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="choix 2">choix 2
+									
+									</label>   
+                         		 </div> 
+                             </div>
+                    </div>
 
 					<div class="form-group">
 						<div class="col-sm-offset-3 col-sm-5">
+
 							<button type="submit" onclick="validate()" class="btn btn-success btn-block btn-login">
-					<i class="entypo-right-open-mini">Ajouter</i>
-					</div>
+					             <i class="entypo-right-open-mini">Ajouter</i>
+						</div>
 					</div>
 							
 				</form>

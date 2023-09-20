@@ -4,7 +4,7 @@
 		<a href="?home"><i class="fa fa-home"></i>Home</a>
 	</li>
 	<li>
-		<a href="?page=recuperer_agents">Agent</a>
+		<a href="?page=recuperer">Agent</a>
 	</li>
 	<li class="active">
 		<strong>Ajouter</strong>
