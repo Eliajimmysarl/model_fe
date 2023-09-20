@@ -6,7 +6,7 @@
 
     $select=$_POST['select'];
 
-    $telephone=$_POST['telephoone'];
+    $telephone=$_POST['telephone'];
 
     $email=$_POST['email'];
 
@@ -35,10 +35,10 @@
     );
 
     $result=curl_post($uri, $token, $data);
-
+  
     $entites=json_decode($result);
 
-    $code = $entitess->code;
+    $code = $entites->code;
         
     if($code ==201)
             {   

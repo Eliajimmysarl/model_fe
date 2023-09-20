@@ -1,6 +1,6 @@
 <?php 
     //Authority for URI
-    $authority="https://test.eliajimmy.net";
+    $authority="http://test.eliajimmy.net";
 
     //Import module Curl
     require_once('composant/curl.php'); 
@@ -14,6 +14,7 @@
                     
                      //Composant1 : recuperer la reponse de la demande
                     require_once('composant/ajout_un/model/ajout_un.php'); 
+                    echo "salut";
                 }
             else if($demande=='importer_agents')
                 {

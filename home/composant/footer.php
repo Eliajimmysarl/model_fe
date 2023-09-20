@@ -7,16 +7,6 @@
 
 
 
-<?php 
-	require_once('composant/chat/message/ihm/afficher_header.php');
-  	require_once('composant/chat/message/ihm/afficher_agents.php');
-  	require_once('composant/chat/message/ihm/afficher_clients.php');
-  require_once('composant/chat/message/ihm/afficher_conversation.php');
-  
-  
-
-?>
-
 
 	<!-- Bottom scripts (common) -->
 	<script src="assets/js/gsap/TweenMax.min.js"></script>
