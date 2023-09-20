@@ -2,33 +2,33 @@
 
     $uri =  $authority.'/entites/';
 
-    $text=$_POST['text'];
+    $texte=$_POST['text'];
 
-    $select=$_POST['select'];
+    $selec=$_POST['select'];
 
     $telephone=$_POST['telephone'];
 
     $email=$_POST['email'];
 
-    $date=$_POST['date'];
+    $dates=$_POST['date'];
 
-    $password=$_POST['password'];
+    $passwords=$_POST['password'];
 
     $optionsRadios=$_POST['optionsRadios'];
 
     $data = array(
         
-        'text' => $text,
+        'texte' => $texte,
 
-        'select'=> $select,
+        'selec'=> $selec,
 
         'telephone'=> $telephone,
 
         'email'=> $email,
 
-        'date'=> $date,
+        'dates'=> $dates,
 
-        'password'=> $password,
+        'passwords'=> $passwords,
 
         'optionsRadios'=> $optionsRadios
     
