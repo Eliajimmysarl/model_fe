@@ -1,47 +1,53 @@
-
-
 <?php
-$uri =  $authority.'/texte/';
-//Recuperer les variables POST
 
-$text=$_POST['text'];
-$select=$_POST['select'];
-$email=$_POST['email'];
-$date=$_POST['date'];
-$password=$_POST['password'];
-$optionsRadios=$_POST['optionsRadios'];
+    $uri =  $authority.'/entites/';
 
+    $text=$_POST['text'];
 
+    $select=$_POST['select'];
 
-$data = array(
+    $telephone=$_POST['telephoone'];
+
+    $email=$_POST['email'];
+
+    $date=$_POST['date'];
+
+    $password=$_POST['password'];
+
+    $optionsRadios=$_POST['optionsRadios'];
+
+    $data = array(
+        
+        'text' => $text,
+
+        'select'=> $select,
+
+        'telephone'=> $telephone,
+
+        'email'=> $email,
+
+        'date'=> $date,
+
+        'password'=> $password,
+
+        'optionsRadios'=> $optionsRadios
     
-    
-    'text' => $text,
-    'select'=> $select,
-    'email'=> $email,
-    'date'=> $date,
-    'password'=> $password,
-    'optionsRadios'=> $optionsRadios,
-   
-);
-$result=curl_post($uri, $token, $data);
-$textes=json_decode($result);
+    );
 
-$code = $textes->code;
-    
-if($code ==201)
-        {   
-           
-            
-            //Intregration de l'IHM affichant la reponse positive
-            require_once('interactions/texte/ajouter/view/reponse_positive.php'); 
-        }
-    else    
-        {
-            
-            //Intregration de l'IHM affichant la reponse negative
-            require_once('interactions/texte/ajouter/view/reponse_negative.php');   
-        }
+    $result=curl_post($uri, $token, $data);
+
+    $entites=json_decode($result);
+
+    $code = $entitess->code;
+        
+    if($code ==201)
+            {   
+                require_once('composant/ajout_un/view/reponse_positive.php'); 
+            }
+        else    
+            {
+                require_once('composant/ajout_un/view/reponse_negative.php');   
+            }
 
 
 ?>

@@ -1,6 +1,6 @@
 <?php 
     //Authority for URI
-    $authority="http://api.eliajimmy.net";
+    $authority="https://test.eliajimmy.net";
 
     //Import module Curl
     require_once('composant/curl.php'); 
