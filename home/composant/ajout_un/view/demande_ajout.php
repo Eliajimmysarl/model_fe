@@ -1,5 +1,6 @@
 <hr/>
 	<ol class="breadcrumb bc-3" >
+<<<<<<< HEAD
 
 		<li>
 			<a href="?home"><i class="fa fa-home"></i>Home</a>
@@ -13,6 +14,20 @@
 			<strong>Ajouter</strong>
 		</li>
 
+=======
+	
+		<li>
+			<a href="?home"><i class="fa fa-home"></i>Home</a>
+		</li>
+	
+		<li>
+			<a href="?page=recuperer_modeles">Ajouter modele</a>
+		</li>
+	
+		<li class="active">
+			<strong>Ajouter</strong>
+		</li>
+>>>>>>> f21bd1082f0f8c625fb1e51e1fb5ad959a3a221d
 	</ol>
 
 <div class="row">
