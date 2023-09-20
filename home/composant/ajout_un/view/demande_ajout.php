@@ -1,15 +1,18 @@
-
-<hr /><ol class="breadcrumb bc-3" >
-	<li>
-		<a href="?home"><i class="fa fa-home"></i>Home</a>
-	</li>
-	<li>
-		<a href="?page=recuperer_modeles">Ajouter modele</a>
-	</li>
-	<li class="active">
-		<strong>Ajouter</strong>
-	</li>
-</ol>
+<hr/>
+	<ol class="breadcrumb bc-3" >
+	
+		<li>
+			<a href="?home"><i class="fa fa-home"></i>Home</a>
+		</li>
+	
+		<li>
+			<a href="?page=recuperer_modeles">Ajouter modele</a>
+		</li>
+	
+		<li class="active">
+			<strong>Ajouter</strong>
+		</li>
+	</ol>
 
 <div class="row">
 			
@@ -22,8 +25,7 @@
 				<div class="panel-title" style="text-align: center;v">
 									
 				</div>
-								
-				       
+							       
 
 			</div>
 					
