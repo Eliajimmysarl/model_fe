@@ -17,8 +17,10 @@
                 {
                     require_once('composant/ajout_plusieurs/model/ajout_plusieurs.php');  
                 }
-           
-
+            else  if($demande=='import_excel')
+                {
+                    require_once('composant/import_excel/model/import_excel.php');  
+                }
         }
     else if (isSet($_GET['page']))
         {
@@ -36,6 +38,10 @@
             else  if($page=='ajouter_plusieurs')
                 {
                     require_once('composant/ajout_plusieurs/view/demande_ajout.php'); 
+                }
+            else  if($page=='importer_excel')
+                {
+                    require_once('composant/import_excel/view/demande_importation.php'); 
                 }
         }
     else   

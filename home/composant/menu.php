@@ -86,7 +86,7 @@
 						</li>
 
 						<li>
-							<a  href="?page=importer_agents">
+							<a  href="?page=importer_excel">
 								<span class="title">Importer_excel</span>
 							</a>
 						</li>
