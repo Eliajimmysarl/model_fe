@@ -57,6 +57,12 @@
 						</li>
 
 						<li>
+							<a  href="?page=importer_image">
+								<span class="title">Import Image</span>
+							</a>
+						</li>
+
+						<li>
 							<a href="?page=recuperer_">
 								<span class="title">Recuperes tout</span>
 							</a>
@@ -79,12 +85,7 @@
 								<span class="title">Modifier un</span>
 							</a>
 						</li>
-
-						<li>
-							<a href="?page=recuperer_agents">
-								<span class="title">importer Photo</span>
-							</a>
-						</li>
+						
 						<li>
 							<a href="?page=recuperer_agents">
 								<span class="title">Convertir PDF</span>

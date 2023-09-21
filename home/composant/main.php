@@ -21,6 +21,10 @@
                 {
                     require_once('composant/import_excel/model/import_excel.php');  
                 }
+            else  if($demande=='import_image')
+                {
+                    require_once('composant/import_image/model/import_image.php');  
+                }
         }
     else if (isSet($_GET['page']))
         {
@@ -42,6 +46,10 @@
             else  if($page=='importer_excel')
                 {
                     require_once('composant/import_excel/view/demande_importation.php'); 
+                }
+            else  if($page=='importer_image')
+                {
+                    require_once('composant/import_image/view/demande_importation.php'); 
                 }
         }
     else   
