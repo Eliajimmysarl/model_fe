@@ -51,6 +51,12 @@
 						</li>
 
 						<li>
+							<a  href="?page=importer_excel">
+								<span class="title">Import Excel</span>
+							</a>
+						</li>
+
+						<li>
 							<a href="?page=recuperer_">
 								<span class="title">Recuperes tout</span>
 							</a>
@@ -82,12 +88,6 @@
 						<li>
 							<a href="?page=recuperer_agents">
 								<span class="title">Convertir PDF</span>
-							</a>
-						</li>
-
-						<li>
-							<a  href="?page=importer_excel">
-								<span class="title">Importer_excel</span>
 							</a>
 						</li>
 						

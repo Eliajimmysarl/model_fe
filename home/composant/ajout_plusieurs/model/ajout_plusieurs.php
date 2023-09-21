@@ -24,12 +24,12 @@
     $code = $entites->code;
         
     if($code ==201)
-            {   
+        {   
                 require_once('composant/ajout_plusieurs/view/reponse_positive.php'); 
-            }
-        else    
-            {
+        }
+    else    
+        {
                 require_once('composant/ajout_plusieurs/view/reponse_negative.php');   
-            }
+        }
    
 ?>

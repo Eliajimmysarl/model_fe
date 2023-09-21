@@ -1,142 +1,149 @@
+
 <?php
 
-    function curl_get($uri, $token)
-        {
+function curl_get($uri, $token)
+    {
+       
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         
-            $ch = curl_init();
+        $authorization = "Authorisation:$token";
 
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-            
-            $authorization = "Authorisation:$token";
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-            curl_setopt($ch, CURLOPT_URL, $uri);
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
-            // Set the content type to application/json
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
-        
-            // Return response instead of outputting
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_close($ch);
 
-            $result=curl_exec($ch);
-        
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            
-            curl_close($ch);
-
-            return   $result;
-        }
+        return   $result;
+    }
 
 
-    function curl_post($uri, $token, $data)
-        {
-        
-            $ch = curl_init();
+function curl_post($uri, $token, $data)
+    {
+       
+        $ch = curl_init();
 
-            $payload = json_encode($data);
+        $payload = json_encode($data);
 
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-                    
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
                 
-            $authorization = "Authorisation:$token";
-
-            curl_setopt($ch, CURLOPT_URL, $uri);
-        
-            // Set the content type to application/json
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
-        
-            // Return response instead of outputting
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-            $result=curl_exec($ch);
-        
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             
-            curl_close($ch);
+        $authorization = "Authorisation:$token";
 
-            return   $result;
-        }
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    function curl_put($uri, $token, $data)
-        {
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
-            $ch = curl_init();
+        curl_close($ch);
 
-            $payload = json_encode($data);
+        return   $result;
+    }
 
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-                    
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+function curl_put($uri, $token, $data)
+    {
+       
+        $ch = curl_init();
 
-            $authorization = "Authorisation:$token";
+        $payload = json_encode($data);
 
-            curl_setopt($ch, CURLOPT_URL, $uri);
-        
-            // Set the content type to application/json
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
-        
-            // Return response instead of outputting
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-            $result=curl_exec($ch);
-        
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            
-            curl_close($ch);
-
-            return   $result;
-        }
-
-    function curl_delete($uri, $token)
-        {
-        
-            $ch = curl_init();
-            
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
-
-            $authorization = "Authorisation:$token";
-
-            curl_setopt($ch, CURLOPT_URL, $uri);
-        
-            // Set the content type to application/json
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
-        
-            // Return response instead of outputting
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-            $result=curl_exec($ch);
-        
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            
-            curl_close($ch);
-
-            return   $result;
-        }
-
-    function curl_import($uri, $token, $data)
-        {
-            $ch = curl_init();
-
-        	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-                    
-            curl_setopt($ch, CURLOPT_POST,1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
                 
-            $authorization = "Authorisation:$token";
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 
-            curl_setopt($ch, CURLOPT_URL, $uri);
-        
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array($authorization));
-        
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $authorization = "Authorisation:$token";
 
-            $result=curl_exec($ch);
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        return   $result;
+    }
+
+function curl_delete($uri, $token)
+    {
+       
+        $ch = curl_init();
+        
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+
+        $authorization = "Authorisation:$token";
+
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        
+        curl_close($ch);
+
+        return   $result;
+    }
+
+
+function curl_import($uri, $token, $data)
+    {
+       
+        $ch = curl_init();
+
+       // $payload = json_encode($data);
+
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+                
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             
-            curl_close($ch);
+        $authorization = "Authorisation:$token";
 
-            return   $result;
-        }
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array($authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        
+        curl_close($ch);
+
+        return   $result;
+    }
 
 ?>
     

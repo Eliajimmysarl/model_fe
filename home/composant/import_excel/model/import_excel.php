@@ -1,19 +1,23 @@
 <?php
     
-    $url = 'http://api.eliajimmy.net/entites/import/';
+    $uri =$authority.'/entites/excel/';
 
-    if (isset($_FILES['clientExcel']) && is_uploaded_file($_FILES['clientExcel']['tmp_name']))
+    $text= $_POST['text'];
+
+    $select= $_POST['select'];
+
+    if (isset($_FILES['excel']) && is_uploaded_file($_FILES['excel']['tmp_name']))
         {
-            $origine = $_FILES['clientExcel']['tmp_name']; 
-            
-            $nomphoto = $_FILES['clientExcel']['name'];
-            
-            $destination = './'.$_FILES['clientExcel']['name'];
-            
+            $origine = $_FILES['excel']['tmp_name']; 
+        
+            $nomphoto = $_FILES['excel']['name'];
+        
+            $destination = './'.$_FILES['excel']['name'];
+        
             move_uploaded_file($origine,$destination);
 
-            if(function_exists('curl_file_create')) 
-                { 
+            if (function_exists('curl_file_create')) 
+                { // php 5.5+
                     $cFile = curl_file_create($destination);
                 } 
             else 
@@ -21,27 +25,36 @@
                     $cFile = '@' . realpath($destination);
                 }
 
-            unlink($destination);
-        }
-
-    $data = array(
-        'fichier' => "excel", 
-
-        'clientExcel'=> $cFile   
-    );
-
-    $result = curl_import($uri, $token, $data);
-
-    $obj = json_decode($result);
-
-    $excel= $obj->excel;
-
-    $code =  $obj->code;
-
-    if($code ==201)
-        {   
-            require_once('composant/text/importer_excel/view/afficher_users.php'); 
-        }
+            $data = array(
+                
+                'fichier' => "excel", 
     
+                'texte' =>  $text, 
+                
+                'selec' => $select,  
+    
+                'excel'=> $cFile   
+
+                );
+
+            $result=curl_import($uri, $token,$data);
+
+            unlink($destination);
+
+            $obj = json_decode($result);  
+
+            $excel= $obj->excel;
+
+            $code =  $obj->code;
+
+            if($code ==201)
+                {   
+                    require_once('composant/text/importer_excel/view/reponse.php'); 
+                }
+        }
+    else
+        {
+            echo"Erreur importation : Verifiez qu'un fichier est importé ou le fichier importé ne dépasse pas 2Mo)";
+        }
 
 ?>
