@@ -43,13 +43,18 @@
 
             $obj = json_decode($result);  
 
-            $excel= $obj->excel;
+            $message= $obj->message;
 
             $code =  $obj->code;
 
             if($code ==201)
                 {   
-                    require_once('composant/text/importer_excel/view/reponse.php'); 
+                    require_once('composant/import_excel/view/reponse.php'); 
+
+                }
+            else
+                {
+                    echo " $message : $code. Json : $result";
                 }
         }
     else
