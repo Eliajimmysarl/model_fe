@@ -11,26 +11,13 @@
 
             if($demande=='ajout_un')
                 {
-                    
-                     //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/ajout_un/model/ajout_un.php'); 
-                    echo "salut";
+                    require_once('composant/ajout_un/model/ajout_un.php');  
                 }
-            else if($demande=='importer_agents')
+            else  if($demande=='ajout_plusieurs')
                 {
-                    
-                     //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/importer_excel/api/import.php'); 
+                    require_once('composant/ajout_plusieurs/model/ajout_plusieurs.php');  
                 }
-              
-
-
-            else if($demande=='ajouter_photo_agent')
-                {
-                    
-                     //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/importer_photo/api/post_image.php'); 
-                }
+           
 
         }
     else if (isSet($_GET['page']))
@@ -38,68 +25,22 @@
             $page=$_GET['page'];
 
            
-             if($page=='ajouter_un')
+            if($page=='ajouter_un')
                 {
-                    //Composant2 : recuperer la reponse de la demande
                     require_once('composant/ajout_un/view/demande_ajout.php');
-
-                   // require_once('composant/agent/ajout/ihm/demande_creation.php'); 
                 }
-            else  if($page=='modifier_agents')
+            else  if($page=='nombre_ligne')
                 {
-                    //Composant2 : recuperer la reponse de la demande
-                    require_once('composant/agent/modifier/api/get_ressources.php'); 
+                    require_once('composant/ajout_plusieurs/view/nombre_ligne.php'); 
                 }
-
-             else  if($page=='modifier_agent')
+            else  if($page=='ajouter_plusieurs')
                 {
-                    //Composant2 : recuperer la reponse de la demande
-                    require_once('composant/agent/modifier/api/get_ressource.php'); 
+                    require_once('composant/ajout_plusieurs/view/demande_ajout.php'); 
                 }
-      
-            else  if($page=='supprimer_agents')
-                {
-                    //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/supprimer/api/get_ressources.php'); 
-                }
-
-            else  if($page=='supprimer_agent')
-                {
-                    //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/supprimer/api/get_ressource.php'); 
-                }
-           
-            else  if($page=='recuperer_agents')
-                {
-                    //Composant2 : recuperer la reponse de la demande
-                    require_once('composant/agent/recuperer/api/get_ressources.php'); 
-                }
-            
-            else  if($page=='recuperer_agent')
-                {
-                    //Composant2 : recuperer la reponse de la demande
-                    require_once('composant/agent/recuperer/api/get_ressource.php'); 
-                }
-
-            else  if($page=='importer_agents')
-                {
-                    //Composant1 : recuperer la reponse de la demande
-                    require_once('composant/agent/importer_excel/ihm/demande_importation.php'); 
-                }
-
-
-            
-    
-
-
-
-          //MENU LINAFOOT APPLICATION
-   
         }
     else   
         {
-            //Composant2 : formuler la demande
-            require_once('composant/dashboard/ihm/index.php'); 
+            //require_once('composant/dashboard/ihm/index.php'); 
         }
       
       

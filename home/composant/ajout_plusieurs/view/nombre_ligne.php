@@ -31,13 +31,13 @@
 					
 			<div class="panel-body">
 						
-				<form method="POST" action="index.php?demande=ajouter_plusieurs"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
+				<form method="POST" action="index.php?page=ajouter_plusieurs"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
 						
 					<div class="form-group">		
-						<label class="col-sm-3 control-label" >Nombre de lignes <abbr style="color:green; font-size:15px;">**</abbr></label>
-							<div class="col-sm-5">
+						<label class="col-sm-6 control-label" >Veuillez preciser le nombre de lignes à ajouter <abbr style="color:green; font-size:15px;">**</abbr></label>
+							<div class="col-sm-2">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="entypo-user"></i></span>
+									<span class="input-group-addon"><i class="entypo-pencil"></i></span>
 									<input type="textnumber" name="nombre_ligne" class="form-control" placeholder="" required="required">
 									<span class="input-group-addon"><i class="r"></i></span>
 								</div>

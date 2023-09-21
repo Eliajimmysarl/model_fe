@@ -31,47 +31,7 @@
 
 			</header>      
 			<ul id="main-menu" class="main-menu">
-			
-			<li >
-					<a href="?home">
-						<i class="entypo-gauge"></i>
-						<span class="title">Dashboard</span>
-					</a>
-				</li>
-
-				
-			
-											
-				<li class="has-sub">
-					<a href="forms-main.html">
-					<i class="fa fa-users"></i>
-						<span class="title">Agent</span>
-					</a>
-					<ul >
-						<li>
-							<a href="?page=ajouter_agent">
-								<span class="title">Ajouter</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="?page=recuperer_agents">
-								<span class="title">Gerer</span>
-							</a>
-						</li>
-
-						<li>
-							<a  href="?page=importer_agents">
-								<span class="title">Importer</span>
-							</a>
-						</li>
-						
-					</ul>
-				</li>
-
-
-				
-											
+							
 				<li class="has-sub">
 					<a href="?page=ajouter_un">
 					<i class="fa fa-users"></i>
@@ -80,7 +40,13 @@
 					<ul >
 						<li>
 							<a href="?page=ajouter_un">
-								<span class="title">Ajouter</span>
+								<span class="title">Ajout un seul</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="?page=nombre_ligne">
+								<span class="title">Ajout plusieurs</span>
 							</a>
 						</li>
 

@@ -31,24 +31,42 @@
 					
 			<div class="panel-body">
 						
-				<form method="POST" action="index.php?demande=ajouter_un"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
+				<form method="POST" action="index.php?demande=ajout_plusieurs"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
 					
 					<?php
 							$nombreLigne=$_POST['nombre_ligne'];
 
-							for($i=0; $i < count($nombreLigne); $i++)
+							echo "<input type='hidden' name='nombre_ligne' value=$nombreLigne>";
+
+							for($i=0; $i < $nombreLigne; $i++)
 								{         
 									echo"
 											<div class='form-group'>		
-												<label class='col-sm-3 control-label' >Text <abbr style='color:green; font-size:15px;'>**</abbr></label>
+												<label class='col-sm-3 control-label' >Text <abbr style='color:green; font-size:15px;'>*</abbr></label>
 													<div class='col-sm-5'>
 														<div class='input-group'>
-															<span class='input-group-addon'><i class='entypo-user'></i></span>
+															<span class='input-group-addon'><i class='entypo-pencil'></i></span>
 															<input type='text' name='text_$i' class='form-control' placeholder='Text' required='required'>
 															<span class='input-group-addon'><i class='r'></i></span>
 														</div>
 													</div>
-											</div>";
+											</div>
+								
+											<div class='form-group' style='border-color:#BDBDBB'>		
+												<label class='col-sm-3 control-label'>Select <abbr style='color:green; font-size:15px;'>*</abbr></label>			
+													<div class='col-sm-5'>
+														<div class='input-group'>
+															<span class='input-group-addon'><i class='entypo-pencil'></i></span>
+															<select  name='select_$i' id='select_$i'  class='form-control' required='required'>
+															<option value='' selected>Select</option>
+																<option value='select1$i'>select1</option>
+																<option value='select2_$i'>select2</option>
+															</select>
+															<span class='input-group-addon'><i class=''></i></span>
+														</div>
+													</div>
+											</div>
+											";
 								}
 					?>
 

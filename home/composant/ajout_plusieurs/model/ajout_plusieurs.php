@@ -1,38 +1,35 @@
 <?php
     
-    $uri =  $authority.'/texte/';
+    $uri =  $authority.'/entites/plusieurs/';
 
     $nombreLigne=$_POST['nombre_ligne'];
 
-    $test=array();
-
-    $select=array();
-
-    for($i=0; $i < $nombreLigne; ++$i )
-        {
-            $test['test_'.$i]= $_POST['test_'.$i];
-
-            $select['test_'.$i]= $_POST['select_'.$i];
-        }
+    $text=array();
 
     $data = array();
 
-    $data['test'][] = $test;
+    for($i=0; $i < $nombreLigne; ++$i )
+        {
+            $text[$i][]= $_POST['text_'.$i];
 
-    $data['select'][] = $test;
+            $text[$i][]= $_POST['select_'.$i];           
+        }
+
+    $data['text']= $text;
 
     $result=curl_post($uri, $token, $data);
+  
+    $entites=json_decode($result);
 
-    $textes=json_decode($result);
-
-    $code = $textes->code;
-    
+    $code = $entites->code;
+        
     if($code ==201)
-        {   
-            require_once('interactions/texte/ajouter/view/reponse_positive.php'); 
-        }
-    else    
-        {
-            require_once('interactions/texte/ajouter/view/reponse_negative.php');   
-        }
+            {   
+                require_once('composant/ajout_plusieurs/view/reponse_positive.php'); 
+            }
+        else    
+            {
+                require_once('composant/ajout_plusieurs/view/reponse_negative.php');   
+            }
+   
 ?>
