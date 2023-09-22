@@ -63,7 +63,7 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperer_">
+							<a href="?page=recuperers">
 								<span class="title">Recuperes tout</span>
 							</a>
 						</li>

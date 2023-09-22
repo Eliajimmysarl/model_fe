@@ -43,6 +43,13 @@
                 {
                     require_once('composant/ajout_plusieurs/view/demande_ajout.php'); 
                 }
+            
+            else  if($page=='recuperers')
+                {
+                    require_once('composant/recuperation_plusieur/model/recuperer_plusieur.php'); 
+                }
+
+            
             else  if($page=='importer_excel')
                 {
                     require_once('composant/import_excel/view/demande_importation.php'); 
