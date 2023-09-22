@@ -48,7 +48,11 @@
                 {
                     require_once('composant/recuperation_plusieur/model/recuperer_plusieur.php'); 
                 }
-
+            else  if($page=='recuperer')
+                {
+                    require_once('composant/recuperation_un_seul/model/recuperer_un.php'); 
+                }
+               
             
             else  if($page=='importer_excel')
                 {

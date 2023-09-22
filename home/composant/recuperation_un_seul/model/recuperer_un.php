@@ -3,27 +3,35 @@
 $id=$_GET['id'];
 
 //URI
-$uri = $authority."/texte/".$id;
+$uri = $authority."/entites/".$id;
 
 $result=curl_get($uri, $token);
 
-    $obj = json_decode($result);                      
-    $textes= $obj->texte;
+    $obj = json_decode($result);
+                      
+    $entites= $obj->test;
 
     $code =  $obj->code;
 
     if($code ==200)
         {   
-            $text=$textes[0]->text; 
+            $texte=$entites[0]->texte; 
 
-            $text=$textes[0]->text;
+            $selec=$entites[0]->selec;
 
-            $text=$textes[0]->text;
+            $dates=$entites[0]->dates;
+            
+            $telephone=$entites[0]->telephone;
+            
+            $email=$entites[0]->email;
+            
+            $optionsRadios=$entites[0]->optionsRadios;
+            
 
-            $id=$textes[0]->id;
+            $id=$entites[0]->id;
 
           
-            require_once('interactions/texte/recuperer/view/recuperation_un.php'); 
+            require_once('composant/recuperation_un_seul/view/recuperation_un.php'); 
         }
     else
         {

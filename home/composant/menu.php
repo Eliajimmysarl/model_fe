@@ -69,7 +69,7 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperer_agents">
+							<a href="?page=recuperer">
 								<span class="title">Recupere un</span>
 							</a>
 						</li>
