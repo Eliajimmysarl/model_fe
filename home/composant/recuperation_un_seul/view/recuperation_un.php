@@ -4,7 +4,7 @@
 		<a href="?home"><i class="fa fa-home"></i>Home</a>
 	</li>
 	<li>
-		<a href="?page=recuperer_modeles">texte</a>
+		<a href="?page=recuperer">texte</a>
 	</li>
 	<li class="active">
 		<strong>Recuperer</strong>
@@ -27,10 +27,13 @@
 										echo"
 										<tr>
 										
-										<td>Prenom :</td><td>". $text ." </td>
-										<tr><td>Nom : </td><td> " . $text." </td>
-										
-										<tr><td>Email : </td><td> ". $text." </td>
+										<td>Text :</td><td>". $texte ." </td>
+										<tr><td>Select : </td><td> " . $selec." </td>
+		
+										<tr><td>Date : </td><td> ". $dates." </td>
+										<tr><td>Telephone : </td><td> ". $telephone." </td>
+										<tr><td>Email : </td><td> ". $email." </td>
+										<tr><td>radio: </td><td> ". $optionsRadios." </td>
 										
 										
 										</tr>

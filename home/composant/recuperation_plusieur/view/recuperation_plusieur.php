@@ -64,7 +64,7 @@
 					<td>". $entites[$i]->optionsRadios ."</td>
 					
 					
-					<td> <a href='?page=modifier_modele&id=". $entites[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> <a href='?page=supprimer_modele&id=". $entites[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> <a href='?page=recuperer_modele&id=". $entites[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
+					<td> <a href='?page=modifier_modele&id=". $entites[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> <a href='?page=supprimer_modele&id=". $entites[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> <a href='?page=recuperer&id=". $entites[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
 				</tr>";
 						         
 				}
@@ -74,7 +74,7 @@
 				<tr>
                 <TH>#</TH>
 					
-				<TH>#</TH>
+				
 					
 					<th>text</th>
 					<th>Select</th>
@@ -83,7 +83,7 @@
 					<th >Email</th>
 					<th >Radio</th>
 					<th></th>
-					
+	
 	
 				</tr>
 			</thead>
