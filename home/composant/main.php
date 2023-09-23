@@ -21,6 +21,10 @@
                 {
                     require_once('composant/modification_plusieurs/model/modification_plusieurs.php');  
                 }
+            else  if($demande=='suppression_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/model/suppression_plusieurs.php');  
+                }
             else  if($demande=='import_excel')
                 {
                     require_once('composant/import_excel/model/import_excel.php');  
@@ -63,6 +67,14 @@
                 {
                     require_once('composant/modification_plusieurs/model/recuperation_plusieurs.php'); 
                 } 
+            else  if($page=='suppression_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/view/suppression_plusieurs.php');  
+                }
+            else  if($page=='supprimer_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/model/recuperation_plusieurs.php'); 
+                }            
             else  if($page=='importer_excel')
                 {
                     require_once('composant/import_excel/view/demande_importation.php'); 

@@ -87,6 +87,12 @@
 						</li>
 
 						<li>
+							<a href="?page=supprimer_plusieurs">
+								<span class="title">Supprimer plusieurs</span>
+							</a>
+						</li>
+
+						<li>
 							<a href="?page=recuperer_agents">
 								<span class="title">Modifier un</span>
 							</a>

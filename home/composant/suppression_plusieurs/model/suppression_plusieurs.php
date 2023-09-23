@@ -11,21 +11,11 @@
     for($i=0; $i < $nombreLigne; ++$i )
         {
             $text[$i][]= $_POST['id_'.$i];
-
-            $text[$i][]= $_POST['text_'.$i];
-
-            $text[$i][]= $_POST['select_'.$i];   
-            
-            $text[$i][]= $_POST['dates_'.$i];   
-
-            $text[$i][]= $_POST['telephone_'.$i];   
-
-            $text[$i][]= $_POST['email_'.$i];   
         }
 
     $data['text']= $text;
 
-    $result=curl_put($uri, $token, $data);
+    $result=curl_delete_plusieurs($uri, $token, $data);
   
     $entites=json_decode($result);
 
@@ -33,7 +23,7 @@
         
     if($code ==200)
         {   
-                require_once('composant/modification_plusieurs/view/reponse.php'); 
+                require_once('composant/suppression_plusieurs/view/reponse.php'); 
         }
   
    

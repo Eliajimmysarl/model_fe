@@ -10,7 +10,7 @@
 		</li>
 
 		<li class="active">
-			<strong>Modification</strong>
+			<strong>Suppression</strong>
 		</li>
 
 	</ol>
@@ -19,7 +19,7 @@
 
 		<div class="col-md-12">
 			
-			<div class="alert alert-success"><strong>Success !!!</strong> Votre demande de modification est executée avec success</div>
+			<div class="alert alert-success"><strong>Success !!!</strong> Votre demande de suppression est executée avec success</div>
 
 		</div>
 
