@@ -28,7 +28,7 @@
 
         $client=json_decode($result);
         $code =  $client->code;
-        if($code ==200)
+        if($code ==201)
             {   
                 session_start();
                 $token =  $client->token;
@@ -36,12 +36,14 @@
                 $nom =  $client->nom;
                 $client_id =  $client->client_id;
                 $telephone =  $client->telephone;
+                $email =  $client->email;
                     
                 $_SESSION['token'] = $token;
                 $_SESSION['prenom'] = $prenom;
                 $_SESSION['nom'] = $nom;
                 $_SESSION['client_id'] = $client_id;
                 $_SESSION['telephone'] = $telephone;
+                $_SESSION['email'] = $email;
 
                 header("Location:home/");            
 
