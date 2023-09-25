@@ -1,25 +1,25 @@
 <?php
 
-$uri = $authority."/texte/";
+$uri =  $authority.'/entites/';
    
 
 $result=curl_get($uri, $token);
 
     $obj = json_decode($result);                      
     
-    $textes= $obj->texte;
+    $entites= $obj->entite;
 
-    $code =  $obj->code;
+    $code = $obj->code;
 
     if($code ==200)
         {   
              
             //Intregration de l'IHM affichant la reponse positive
-            require_once('interactions/texte/supprimer/view/recuperation_plusieur.php'); 
+            require_once('composant/suppression_plusieurs/view/recuperation_plusieurs.php'); 
         }
         else
         {
-            echo $textes;  
+            echo "verifier le code sources ";  
         }
 
 

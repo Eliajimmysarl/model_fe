@@ -38,10 +38,11 @@
 				    <TH>#</TH>
 					
 					<th>text</th>
-					<th>text</th>
-					<th >text</th>
-					
-					
+					<th>Select</th>
+					<th >date</th>
+					<th >Telephone</th>
+					<th >Email</th>
+					<th >Radio</th>
 					<th></th>
 	
 				</tr>
@@ -50,17 +51,20 @@
 				
 			<?php
 							
-			for($i=0; $i < count($textes); $i++)
+			for($i=0; $i < count($entites); $i++)
 				{         
 					echo"                         
                			 <tr class='odd gradeX'>
 								<td>$i</td>
-					<td > " . $textes[$i]->text ."</td>
-					<td>". $textes[$i]->text ."</td>
-					<td>". $textes[$i]->text ."</td>
+					<td > " . $entites[$i]->texte ."</td>
+					<td>". $entites[$i]->selec ."</td>
+					<td>". $entites[$i]->dates ."</td>
+					<td>". $entites[$i]->telephone ."</td>
+					<td>". $entites[$i]->email ."</td>
+					<td>". $entites[$i]->optionsRadios ."</td>
 					
 					
-					<td> <a href='?page=modifier_modele&id=". $textes[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> <a href='?page=supprimer_modele&id=". $textes[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> <a href='?page=recuperer_modele&id=". $textes[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
+					<td> <a href='?page=modification&id=". $entites[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> </td>
 				</tr>";
 						         
 				}
@@ -70,10 +74,16 @@
 				<tr>
                 <TH>#</TH>
 					
-					<th>text</th>
-					<th>text</th>
-					<th >text</th>
+				
 					
+					<th>text</th>
+					<th>Select</th>
+					<th >date</th>
+					<th >Telephone</th>
+					<th >Email</th>
+					<th >Radio</th>
+					<th></th>
+	
 	
 				</tr>
 			</thead>

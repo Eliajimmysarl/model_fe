@@ -64,7 +64,7 @@
 
 						<li>
 							<a href="?page=recuperers">
-								<span class="title">Recuperes tout</span>
+								<span class="title">Recuperer plusieurs</span>
 							</a>
 						</li>
 
@@ -75,13 +75,25 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperer_agents">
+							<a href="?page=recuperer_supprimer">
 								<span class="title">Supprimer un</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="?page=recuperer_agents">
+							<a href="?page=modifier_plusieurs">
+								<span class="title">Modifier plusieurs</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="?page=supprimer_plusieurs">
+								<span class="title">Supprimer plusieurs</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="?page=recuperes_modification">
 								<span class="title">Modifier un</span>
 							</a>
 						</li>

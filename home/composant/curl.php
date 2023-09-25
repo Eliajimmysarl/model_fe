@@ -145,5 +145,35 @@ function curl_import($uri, $token, $data)
         return   $result;
     }
 
+function curl_delete_plusieurs($uri, $token, $data)
+    {
+       
+        $ch = curl_init();
+
+        $payload = json_encode($data);
+
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+                
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+
+        $authorization = "Authorisation:$token";
+
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        
+        curl_close($ch);
+
+        return   $result;
+    }
+
 ?>
     

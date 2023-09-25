@@ -3,20 +3,20 @@
 $id=$_GET['id'];
 
 //URI
-$uri = $authority."/texte/".$id;
+$uri = $authority."/entites/".$id;
 
 $result=curl_delete($uri, $token);
 
     $obj = json_decode($result);                      
-    $textes= $obj->texte;
+    $entites= $obj->test;
 
     $code =  $obj->code;
 
     if($code ==200)
         {    
              
-            //Intregration de l'IHM affichant la reponse positive
-            require_once('interaction/texte/supprimer/view/reponse_positive.php'); 
+            
+            require_once('composant/suppression_un/view/reponse_positive.php');
         }
         else
         {

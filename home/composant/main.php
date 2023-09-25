@@ -17,6 +17,24 @@
                 {
                     require_once('composant/ajout_plusieurs/model/ajout_plusieurs.php');  
                 }
+           
+            else  if($demande=='modification_un')
+                {
+                    require_once('composant/modification_un/model/modification_un.php');  
+                }
+            else  if($demande=='suppression_un')
+                {
+                    require_once('composant/suppression_un/model/suppression.php');  
+                }
+
+            else  if($demande=='modification_plusieurs')
+                {
+                    require_once('composant/modification_plusieurs/model/modification_plusieurs.php');  
+                }
+            else  if($demande=='suppression_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/model/suppression_plusieurs.php');  
+                }
             else  if($demande=='import_excel')
                 {
                     require_once('composant/import_excel/model/import_excel.php');  
@@ -42,18 +60,47 @@
             else  if($page=='ajouter_plusieurs')
                 {
                     require_once('composant/ajout_plusieurs/view/demande_ajout.php'); 
-                }
-            
+                } 
             else  if($page=='recuperers')
                 {
                     require_once('composant/recuperation_plusieur/model/recuperer_plusieur.php'); 
+                }
+            else  if($page=='recuperes_modification')
+                {
+                    require_once('composant/modification_un/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='recuperer_supprimer')
+                {
+                    require_once('composant/suppression_un/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='demande_supprimer')
+                {
+                    require_once('composant/suppression_un/model/recuperer_un.php'); 
                 }
             else  if($page=='recuperer')
                 {
                     require_once('composant/recuperation_un_seul/model/recuperer_un.php'); 
                 }
-               
-            
+            else  if($page=='modification')
+                {
+                    require_once('composant/modification_un/model/recuperer_un.php'); 
+                }
+            else  if($page=='modification_plusieurs')
+                {
+                    require_once('composant/modification_plusieurs/view/modification_plusieurs.php');  
+                }
+            else  if($page=='modifier_plusieurs')
+                {
+                    require_once('composant/modification_plusieurs/model/recuperation_plusieurs.php'); 
+                } 
+            else  if($page=='suppression_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/view/suppression_plusieurs.php');  
+                }
+            else  if($page=='supprimer_plusieurs')
+                {
+                    require_once('composant/suppression_plusieurs/model/recuperation_plusieurs.php'); 
+                }            
             else  if($page=='importer_excel')
                 {
                     require_once('composant/import_excel/view/demande_importation.php'); 
