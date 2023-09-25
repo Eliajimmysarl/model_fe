@@ -2,16 +2,18 @@
   
   if (isSet($_POST['email']))
     {
-        $url = 'http://api.eliajimmy.net/process/';
+        $url = 'http://api.eliajimmy.net/connecter/';
 
         //Recuperer les variables POST
         $email=$_POST['email'];
         $password=$_POST['password'];
+        $type='externe';
         $ch = curl_init();
         // Setup request to send json via POST
         $data = array(
-            'client_id'=> $email,
-            'client_secret'=> $password
+            'user_id'=> $email,
+            'user_secret'=> $password,
+            'user_type'=> $type
         );
         //Transform row int Json objet
         $payload = json_encode($data);
