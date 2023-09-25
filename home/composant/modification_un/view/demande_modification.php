@@ -28,7 +28,7 @@
 					
 			<div class="panel-body">
 			
-				<form method="POST" action="index.php?demande=modifier_agent" id="theForm"  role="form" class="form-horizontal form-groups-bordered">
+				<form method="POST" action="index.php?demande=modification_un"   id="theForm"  role="form" class="form-horizontal form-groups-bordered">
 						
 					<input type="HIDDEN" name="id" value=<?php echo $_GET['id'];?>>	
 
@@ -37,7 +37,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<input type="text" name="text" value=<?php echo $text;?>  class="form-control">
+									<input type="text" name="texte" value=<?php echo $texte;?>  class="form-control">
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
@@ -53,7 +53,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<select  name="sexe" id="monselect"  class="form-control" value=<?php echo $select;?> required="required">
+									<select  name="selec" id="monselect"  class="form-control" value=<?php echo $selec;?> required="required">
 									<option value="" selected>Select</option>
 										<option value="Select1">Select1</option>
 										<option value="Select2">Select2</option>
@@ -68,7 +68,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-									<input type="date" name="date" class="form-control" placeholder=" date" value=<?php echo $date;?> required="required">
+									<input type="date" name="dates" class="form-control" placeholder=" date" value=<?php echo $dates;?> required="required">
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
@@ -99,16 +99,6 @@
 					</div>
                 
 
-					<div class="form-group">		
-						<label class="col-sm-3 control-label">E-mail <abbr style="color:green; font-size:15px;">**</abbr></label>			
-							<div class="col-sm-5">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="entypo-mail"></i></span>
-									<input type="email" name="email" class="form-control" placeholder=" email@gmail.com" required="required">
-									<span class="input-group-addon"><i class=""></i></span>
-								</div>
-							</div>
-					</div>
 
                 
 					<div class="form-group">	
@@ -123,11 +113,11 @@
 									<input type="password" name="password"  id=mdp  class="form-control">
 									<span class="input-group-addon"></span>
 								</div>
-							</div>
 
-							<div style='text-align:left;'>
+								<div style='text-align:left;'>
 						    	    <input type="checkbox" onclick="voirpass()"> Afficher le mot de passe
 					    	</div>
+						</div>
 					</div>
 
 					<div class="form-group">		

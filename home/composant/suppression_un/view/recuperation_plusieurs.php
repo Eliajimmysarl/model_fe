@@ -35,45 +35,56 @@
 		<table class="table table-bordered datatable" id="table-1">
 			<thead>
 				<tr>
-				    <TH>#</TH>
-					
-					<th>text</th>
-					<th>text</th>
-					<th >text</th>
-					
-					
-					<th></th>
+					<TH>#</TH>
+					<TH>text</TH>
+					<TH>Select</TH>
+					<TH>date</TH>
+					<TH>Telephone</TH>
+					<TH>Email</TH>
+					<TH>Radio</TH>
+					<TH></TH>
 	
 				</tr>
 			</thead>
 			<tbody>
 				
-			<?php
-							
-			for($i=0; $i < count($textes); $i++)
-				{         
-					echo"                         
-               			 <tr class='odd gradeX'>
-								<td>$i</td>
-					<td > " . $textes[$i]->text ."</td>
-					<td>". $textes[$i]->text ."</td>
-					<td>". $textes[$i]->text ."</td>
-					
-					
-					<td> <a href='?page=modifier_modele&id=". $textes[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> <a href='?page=supprimer_modele&id=". $textes[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> <a href='?page=recuperer_modele&id=". $textes[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
-				</tr>";
+				<?php
+								
+				for($i=0; $i < count($entites); $i++)
+				{ 
+				echo"                         
+					<tr class='odd gradeX'>
+
+						<td>$i</td>
+
+						<td > " . $entites[$i]->texte ."</td>
+
+						<td>". $entites[$i]->selec ."</td>
+
+						<td>". $entites[$i]->dates ."</td>
+
+						<td>". $entites[$i]->telephone ."</td>
+
+						<td>". $entites[$i]->email ."</td>
+
+						<td>". $entites[$i]->optionsRadios ."</td>
+		
+						<td> <a href='?page=demande_supprimer&id=". $entites[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> </td>
+					</tr>";
 						         
 				}
 				?>
-
-               <thead>
+            </tbody>
+            <thead>
 				<tr>
-                <TH>#</TH>
-					
-					<th>text</th>
-					<th>text</th>
-					<th >text</th>
-					
+                    <TH>#</TH>
+					<TH>text</TH>
+					<TH>Select</TH>
+					<TH>date</TH>
+					<TH>Telephone</TH>
+					<TH>Email</TH>
+					<TH>Radio</TH>
+					<TH></TH>
 	
 				</tr>
 			</thead>

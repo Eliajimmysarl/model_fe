@@ -17,6 +17,16 @@
                 {
                     require_once('composant/ajout_plusieurs/model/ajout_plusieurs.php');  
                 }
+           
+            else  if($demande=='modification_un')
+                {
+                    require_once('composant/modification_un/model/modification_un.php');  
+                }
+            else  if($demande=='suppression_un')
+                {
+                    require_once('composant/suppression_un/model/suppression.php');  
+                }
+
             else  if($demande=='modification_plusieurs')
                 {
                     require_once('composant/modification_plusieurs/model/modification_plusieurs.php');  
@@ -55,9 +65,25 @@
                 {
                     require_once('composant/recuperation_plusieur/model/recuperer_plusieur.php'); 
                 }
+            else  if($page=='recuperes_modification')
+                {
+                    require_once('composant/modification_un/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='recuperer_supprimer')
+                {
+                    require_once('composant/suppression_un/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='demande_supprimer')
+                {
+                    require_once('composant/suppression_un/model/recuperer_un.php'); 
+                }
             else  if($page=='recuperer')
                 {
                     require_once('composant/recuperation_un_seul/model/recuperer_un.php'); 
+                }
+            else  if($page=='modification')
+                {
+                    require_once('composant/modification_un/model/recuperer_un.php'); 
                 }
             else  if($page=='modification_plusieurs')
                 {

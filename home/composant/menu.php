@@ -75,7 +75,7 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperer_agents">
+							<a href="?page=recuperer_supprimer">
 								<span class="title">Supprimer un</span>
 							</a>
 						</li>
@@ -93,7 +93,7 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperer_agents">
+							<a href="?page=recuperes_modification">
 								<span class="title">Modifier un</span>
 							</a>
 						</li>

@@ -1,47 +1,54 @@
 <?php
-$id=$_POST['id'];
 
-$uri = $authority.'/text/'.$id;
+    $id=$_POST['id'];
 
-//Recuperer les variables POST
-$text=$_POST['text'];
-$select=$_POST['select'];
-$date=$_POST['date'];
-$email=$_POST['email'];
-$telephone=$_POST['telephone'];
-$optionsRadios=$_POST['optionsRadios'];
-//$password=$_POST['password'];
-$password=password_hash($_POST['password'], PASSWORD_DEFAULT);
-$mode="formulaire";
+    $uri = $authority."/entites/".$id;
+
+        $texte=$_POST['texte'];
+
+        $selec=$_POST['selec'];
+
+        $dates=$_POST['dates'];
+
+        $email=$_POST['email'];
+
+        $telephone=$_POST['telephone'];
+
+        $optionsRadios=$_POST['optionsRadios'];
+        
+        $password=password_hash($_POST['password'], PASSWORD_DEFAULT);
+        
+        $mode="formulaire";
 
 
+    $data = array(
+            
+            'texte' => $texte,
+            
+            'selec' => $selec,
 
-// Setup request to send json via POST
-$data = array(
-    
-    'text' => $text,
-    'select' => $select,
-    'date' => $date,
-	'email'=> $email,
-	'telephone'=> $telephone,
-    'password'=> $password,
-    'optionsRadios'=> $optionsRadios
+            'dates' => $dates,
 
-);    
+            'email'=> $email,
 
-$result=curl_put($uri, $token,$data);
-     
-    $textes=json_decode($result);
-    $code =  $textes->code;
-    if($code ==200)
-        {   
-          
-                //Intregration de l'IHM affichant la reponse positive
-                require_once('composant/text/modifier/view/reponse_positive.php'); 
-            }
-            else
-            {
-               echo  $code;  
+            'telephone'=> $telephone,
+
+            'password'=> $password,
+
+            'optionsRadios'=> $optionsRadios
+
+    );    
+
+    $result=curl_put($uri, $token,$data);
+        
+        $test=json_decode($result);
+
+        $code =  $test->code;
+
+        if($code ==200)
+        
+            {   
+                require_once('composant/modification_un/view/reponse_positive.php');
             }
     
     
