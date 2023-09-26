@@ -1,9 +1,20 @@
 <?php
 
-$uri =  $authority.'/entites/';
-   
+    $uri =  $authority.'/entites/';
 
-$result=curl_get($uri, $token);
+    $selec=$_POST['select'];
+
+    $optionsRadios=$_POST['optionsRadios'];
+    
+    $data = array(
+
+        'selec'=> $selec,
+
+        'optionsRadios'=> $optionsRadios
+    
+    );
+
+    $result=curl_get_data($uri, $token, $data);
 
     $obj = json_decode($result);                      
     
