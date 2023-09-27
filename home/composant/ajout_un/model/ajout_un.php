@@ -4,7 +4,7 @@
 
     $texte=$_POST['text'];
 
-    $selec=$_POST['select'];
+    $selec=$_POST['selec'];
 
     $telephone=$_POST['telephone'];
 

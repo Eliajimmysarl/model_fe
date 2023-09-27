@@ -27,7 +27,6 @@ function curl_get($uri, $token)
         return   $result;
     }
 
-
 function curl_post($uri, $token, $data)
     {
        
@@ -155,6 +154,36 @@ function curl_delete_plusieurs($uri, $token, $data)
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
                 
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+
+        $authorization = "Authorisation:$token";
+
+        curl_setopt($ch, CURLOPT_URL, $uri);
+    
+        // Set the content type to application/json
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json', $authorization));
+    
+        // Return response instead of outputting
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $result=curl_exec($ch);
+    
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        
+        curl_close($ch);
+
+        return   $result;
+    }
+
+    function curl_get_data($uri, $token, $data)
+    {
+       
+       $ch = curl_init();
+
+        $payload = json_encode($data);
+
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+                
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 
         $authorization = "Authorisation:$token";
 

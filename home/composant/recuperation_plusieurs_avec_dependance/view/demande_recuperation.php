@@ -31,14 +31,14 @@
 					
 			<div class="panel-body">
 						
-				<form method="POST" action="index.php?demande=demande_recuperation"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
+				<form method="POST" action="index.php?demande=recuperation_avec_dependance"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
 	
 					<div class="form-group">		
 						<label class="col-sm-3 control-label">select <abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<select  name="sexe" id="monselect"  class="form-control" required="required">
+									<select  name="selec" id="selec"  class="form-control" required="required">
 									<option value="" selected>Select</option>
 									
 										<?php

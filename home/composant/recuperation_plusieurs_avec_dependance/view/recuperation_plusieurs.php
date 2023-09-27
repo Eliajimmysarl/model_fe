@@ -52,10 +52,12 @@
 			<?php
 							
 			for($i=0; $i < count($entites); $i++)
-				{         
+				{ 
+					
+					$j = $i + 1;
 					echo"                         
                			 <tr class='odd gradeX'>
-								<td>$i</td>
+								<td>$j</td>
 					<td > " . $entites[$i]->texte ."</td>
 					<td>". $entites[$i]->selec ."</td>
 					<td>". $entites[$i]->dates ."</td>
@@ -64,7 +66,7 @@
 					<td>". $entites[$i]->optionsRadios ."</td>
 					
 					
-					<td> <a href='?page=modification&id=". $entites[$i]->id ."' class='btn btn-info btn-sm btn-icon icon-left'><i class='entypo-pencil'></i>Modifier</a> <a href='?page=supprimer_modele&id=". $entites[$i]->id ."' class='btn btn-danger btn-sm btn-icon icon-left'><i class='entypo-cancel'></i>Supprimer</a> <a href='?page=recuperer&id=". $entites[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
+					<td><a href='?page=recuperation_un&id=". $entites[$i]->id ."'  class='btn btn-default btn-sm btn-icon icon-left'><i class='entypo-info'></i>Profile</a></td>
 				</tr>";
 						         
 				}

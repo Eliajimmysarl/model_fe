@@ -65,9 +65,9 @@
 										<select  name="select" id="select"  class="form-control" required="required">
 										<option value="" selected>Select</option>
 											
-											<option value="select1">select1</option>
+											<option value="1">select1</option>
 											
-											<option value="select2">select2</option>
+											<option value="2">select2</option>
 										
 										</select>
 										<span class="input-group-addon"><i class=""></i></span>

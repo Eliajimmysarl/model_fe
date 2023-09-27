@@ -79,7 +79,7 @@
 														<div class='input-group'>
 															<span class='input-group-addon'><i class='entypo-pencil'></i></span>
 															<select  name='select_$i' id='select_$i'  class='form-control' required='required'>
-															<option value='$selec[$id]' selected>$selec[$ident]</option>
+															<option value='$selec[$ident]' selected>$selec[$ident]</option>
 																<option value='select1_$i'>select1</option>
 																<option value='select2_$i'>select2</option>
 															</select>

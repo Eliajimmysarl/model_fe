@@ -31,7 +31,7 @@
 					
 			<div class="panel-body">
 						
-				<form method="POST" action="index.php?demande=ajouter_un"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
+				<form method="POST" action="index.php?demande=ajouter_un_avec_dependance"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
 	
 					<div class="form-group">		
 						<label class="col-sm-3 control-label" >Text <abbr style="color:green; font-size:15px;">**</abbr></label>
@@ -49,7 +49,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<select  name="sexe" id="monselect"  class="form-control" required="required">
+									<select  name="selec" id="monselect"  class="form-control" required="required">
 									<option value="" selected>Select</option>
 									
 										<?php
@@ -138,23 +138,22 @@
                         
 						<div class="col-sm-offset-3 col-sm-5"> 
 							
-							<?php
-								for($i=0; $i < count($options); $i++)
-									{         
-										echo"  
-												<div class='radio'> 
-													<label> 
-
-														<input type='radio' name='optionsRadios' id='optionsRadios1' value=". $options[$i]->id ." >".$options[$i]->nom."
-													
-													</label> 
-												</div>		
-			
-											";
+						<select  name="optionsRadios" id="optionsRadios"  class="form-control" required="required">
+									<option value="" selected>item</option>
+									
+										<?php
+											for($i=0; $i < count($options); $i++)
+												{         
+													echo"  
+															<option value=". $options[$i]->id ."> ". $options[$i]->nom ."</option>                       
+															
+													";
 																
-									}
-							?>
-												
+												}
+										?>
+
+                                    </select>
+																		
                 		</div>
                          
 					</div>

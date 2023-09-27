@@ -18,16 +18,8 @@
 			
 	<div class="col-md-12">
 				
-		<div class="panel panel-primary" data-collapsed="0">
+		<div class="panel panel-primary" data-collapsed="0">	
 				
-			<div class="panel-heading">
-
-				<div class="panel-title" style="text-align: center;">
-						Voulez - vous supprimer les lignes suivantes?		
-				</div>
-							       
-			</div>
-					
 			<div class="panel-body">
 						
 				<form method="POST" action="index.php?demande=suppression_plusieurs"  id="theForm"  role="form" class="form-horizontal form-groups-bordered" enctype='multipart/form-data'>
@@ -39,74 +31,49 @@
 
                             $texte=$_POST['texte'];
 
-                            $selec=$_POST['selec'];
+                            $nombreLigne=count($is);
 
-                            $dates=$_POST['dates'];
-                        
-                            $telephone=$_POST['telephone'];
-    
-                            $email=$_POST['email'];
-                        
-                            $optionsRadio=$_POST['optionsRadios'];
-
-							$nombreLigne=count($is);
-
-							echo "<input type='hidden' name='nombre_ligne' value=$nombreLigne>";
-
-							for($i=0; $i < $nombreLigne; $i++)
-								{     
-									$ident = $is[$i]; 
-									 
-									$id = $ids[$ident];
-								
-									echo"
-											<input type='hidden' name='id_$i' value='$id'>
-
-											<div class='form-group'>		
-												
-												<label class='col-sm-3 control-label' >$texte[$ident]</label>
-											
-												</div>
-								
-											<div class='form-group' >		
-												
-												<label class='col-sm-3 control-label'>$selec[$ident]</label>			
-													
-											</div>
-
-                                            <div class='form-group'>		
-                                                
-												<label class='col-sm-3 control-label'>$dates[$ident]</label>			
-                                                   
-                                            </div> 
-                        
-                                            <div class='form-group'>		
-                                                
-												<label class='col-sm-3 control-label'>$telephone[$ident]</label>
-
-                                            </div>
-                                            
-                                            <div class='form-group' style='border-color:#BDBDBB'>		
-                                                
-												<label class='col-sm-3 control-label'>$email[$ident]</label>
-
-                                            </div>
-											";
-								}
-					?>
-
-					<div class="form-group">
-						
-						<div class="col-sm-offset-3 col-sm-5">
+							echo "<input type='hidden' name='nombre_ligne' value=$nombreLigne>
 							
-							<button type="submit" onclick="validate()" class="btn btn-success btn-block btn-login">
+									<div class='row'>
+
+										<div class='col-md-12'>
+											
+											<div class='alert alert-danger'>
+											
+												<strong>Voulez-vous supprimer les lignes suivantes : 
+								"; 
+
+								for($i=0; $i < $nombreLigne; $i++)
+									{     
+										$ident = $is[$i]; 
+										
+										$id = $ids[$ident];
+									
+										echo"
+												<input type='hidden' name='id_$i' value='$id'>
+
+												$texte[$ident] 
+											"; 
+										
+										if($i < $nombreLigne - 1) 
+												{
+													echo ", ";
+												} 		
+									}
+	
+							echo " 	? .</strong> <br> <a href='?page=recuperer_plusieurs'><button type='button' class='btn btn-blue'>NON</button></a>	
+
+							<div class='col-sm-offset-1 col-sm-1'>
+							
+							<button type='submit' onclick='validate()' class='btn btn-success btn-block btn-login'>
 						
-							<i class="entypo-right-open-mini">Confirmer la suppression</i>
+							<i class='entypo-right-open-mini'>OUI</i>
 						
 						</div>
-					
-					</div>
 							
+							";
+						?>			
 				</form>
 						
 			</div>

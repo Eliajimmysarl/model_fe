@@ -36,7 +36,7 @@
 									require_once('composant/header.php');
 
 									//Composant5 : footer de body
-									require_once('composant/main.php');
+									require_once('composant/controller.php');
 									
 									//Composant5 : footer de body
 									require_once('composant/footer.php');

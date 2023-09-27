@@ -17,7 +17,10 @@
                 {
                     require_once('composant/ajout_plusieurs/model/ajout_plusieurs.php');  
                 }
-           
+            else  if($demande=='ajouter_un_avec_dependance')
+                {
+                    require_once('composant/ajout_un_avec_dependance/model/ajout_un.php');  
+                }
             else  if($demande=='modification_un')
                 {
                     require_once('composant/modification_un/model/modification_un.php');  
@@ -25,6 +28,11 @@
             else  if($demande=='suppression_un')
                 {
                     require_once('composant/suppression_un/model/suppression.php');  
+                }
+
+            else  if($demande=='recuperation_avec_dependance')
+                {
+                    require_once('composant/recuperation_plusieurs_avec_dependance/model/recuperation_avec_dependance.php');  
                 }
 
             else  if($demande=='modification_plusieurs')
@@ -47,7 +55,6 @@
     else if (isSet($_GET['page']))
         {
             $page=$_GET['page'];
-
            
             if($page=='ajouter_un')
                 {
@@ -57,13 +64,21 @@
                 {
                     require_once('composant/ajout_plusieurs/view/nombre_ligne.php'); 
                 }
+            else if($page=='ajouter_un_avec_dependance')
+                {
+                    require_once('composant/ajout_un_avec_dependance/model/recuperer_liste.php');
+                }
             else  if($page=='ajouter_plusieurs')
                 {
                     require_once('composant/ajout_plusieurs/view/demande_ajout.php'); 
                 } 
-            else  if($page=='recuperers')
+            else  if($page=='recuperer_plusieurs')
                 {
-                    require_once('composant/recuperation_plusieur/model/recuperer_plusieur.php'); 
+                    require_once('composant/recuperation_plusieurs/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='recuperer_avec_dependance')
+                {
+                    require_once('composant/recuperation_plusieurs_avec_dependance/model/recuperer_liste.php'); 
                 }
             else  if($page=='recuperes_modification')
                 {
@@ -77,9 +92,13 @@
                 {
                     require_once('composant/suppression_un/model/recuperer_un.php'); 
                 }
-            else  if($page=='recuperer')
+            else  if($page=='recuperer_un')
                 {
-                    require_once('composant/recuperation_un_seul/model/recuperer_un.php'); 
+                    require_once('composant/recuperation_un/model/recuperer_plusieurs.php'); 
+                }
+            else  if($page=='recuperation_un')
+                {
+                    require_once('composant/recuperation_un/model/recuperer_un.php'); 
                 }
             else  if($page=='modification')
                 {

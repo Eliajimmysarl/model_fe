@@ -2,7 +2,7 @@
 
     $uri =  $authority.'/entites/';
 
-    $selec=$_POST['select'];
+    $selec=$_POST['selec'];
 
     $optionsRadios=$_POST['optionsRadios'];
     
@@ -16,8 +16,8 @@
 
     $result=curl_get_data($uri, $token, $data);
 
-    $obj = json_decode($result);                      
-    
+    $obj = json_decode($result);   
+       
     $entites= $obj->entite;
 
     $code = $obj->code;
@@ -26,7 +26,7 @@
         {   
              
             //Intregration de l'IHM affichant la reponse positive
-            require_once('composant/recuperation_plusieur/view/recuperation_plusieur.php'); 
+            require_once('composant/recuperation_plusieurs_avec_dependance/view/recuperation_plusieurs.php'); 
         }
         else
         {

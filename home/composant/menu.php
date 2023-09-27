@@ -40,13 +40,19 @@
 					<ul >
 						<li>
 							<a href="?page=ajouter_un">
-								<span class="title">Ajout un seul</span>
+								<span class="title">Ajout un</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="?page=nombre_ligne">
 								<span class="title">Ajout plusieurs</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="?page=ajouter_un_avec_dependance">
+								<span class="title">Ajout avec dependance</span>
 							</a>
 						</li>
 
@@ -63,14 +69,20 @@
 						</li>
 
 						<li>
-							<a href="?page=recuperers">
+							<a href="?page=recuperer_plusieurs">
 								<span class="title">Recuperer plusieurs</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="?page=recuperer">
-								<span class="title">Recupere un</span>
+							<a href="?page=recuperer_avec_dependance">
+								<span class="title">Recuperer avec dependance</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="?page=recuperer_un">
+								<span class="title">Recuperer un</span>
 							</a>
 						</li>
 
@@ -97,13 +109,7 @@
 								<span class="title">Modifier un</span>
 							</a>
 						</li>
-						
-						<li>
-							<a href="?page=recuperer_agents">
-								<span class="title">Convertir PDF</span>
-							</a>
-						</li>
-						
+												
 					</ul>
 				</li>
 

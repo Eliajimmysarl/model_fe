@@ -4,7 +4,7 @@
 
     $texte=$_POST['text'];
 
-    $selec=$_POST['select'];
+    $selec=$_POST['selec'];
 
     $telephone=$_POST['telephone'];
 
@@ -42,7 +42,7 @@
         
     if($code ==201)
             {   
-                require_once('composant/ajout_un/view/reponse_positive.php'); 
+                require_once('composant/ajout_un_avec_dependance/view/reponse_positive.php'); 
             }
         else    
             {

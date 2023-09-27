@@ -1,27 +1,36 @@
 <?php
 
-    $uri =  $authority.'/selections/';
+    $uri =  $authority.'/categorie1/';
    
     $result=curl_get($uri, $token);
 
     $obj = json_decode($result);                      
     
-    $seletions= $obj->select;
+    $selections= $obj->selections;
 
 
-    $uri =  $authority.'/options/';
+    $uri =  $authority.'/categorie2/';
    
     $result=curl_get($uri, $token);
 
     $obj = json_decode($result);                      
     
     $options= $obj->options;
+    
+    
+    $code = $obj->code;
 
-    if($code ==201)
+    if($code ==200)
         {   
-                require_once('composant/ajout_un_avec_dependance/view/demande_ajout.php'); 
+             
+            //Intregration de l'IHM affichant la reponse positive
+            require_once('composant/ajout_un_avec_dependance/view/demande_ajout.php'); 
         }
-   
+    else
+        {
+            echo "verifier le code sources ";  
+        }
+
    
 
 

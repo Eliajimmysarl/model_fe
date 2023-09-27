@@ -37,7 +37,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<input type="text" name="texte" value=<?php echo $texte;?>  class="form-control">
+									<input type="text" name="texte" value="<?php echo $texte;?>"  class="form-control">
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
@@ -53,10 +53,10 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-user"></i></span>
-									<select  name="selec" id="monselect"  class="form-control" value=<?php echo $selec;?> required="required">
+									<select  name="selec" id="monselect"  class="form-control" value="<?php echo $selec;?>" required="required">
 									<option value="" selected>Select</option>
-										<option value="Select1">Select1</option>
-										<option value="Select2">Select2</option>
+										<option value="1">Select1</option>
+										<option value="2">Select2</option>
                                     </select>
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
@@ -79,7 +79,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-phone"></i></span>
-									<input type="text" name="telephone" value=<?php echo $telephone;?> id=numero class="form-control">
+									<input type="text" name="telephone" value="<?php echo $telephone;?>" id=numero class="form-control">
 									<span style='' id=avnum> </span>
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
@@ -92,7 +92,7 @@
 							<div class="col-sm-5">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="entypo-mail"></i></span>
-									<input type="email" name="email"  value=<?php echo $email;?> class="form-control">
+									<input type="email" name="email"  value="<?php echo $email;?>" class="form-control">
 									<span class="input-group-addon"><i class=""></i></span>
 								</div>
 							</div>
@@ -139,11 +139,11 @@
                         <div class="form-group"> 
                             <div class="col-sm-offset-3 col-sm-5"> 
                                 <div class="radio"> 
-                                    <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Radio Input 1
+                                    <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked="">Radio Input 1
                              </label> 
                         </div>
                         <div class="radio">
-                            <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio Input 2
+                            <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">Radio Input 2
                           </label>   
                           </div> 
                          </div>
