@@ -1,24 +1,23 @@
 <?php
 
-$id=$_GET['id'];
+    $id=$_GET['id'];
 
-//URI
-$uri = $authority."/entites/".$id;
+    $uri = $authority."/entites/".$id;
 
-$result=curl_delete($uri, $token);
+    $result=curl_delete($uri, $token);
 
-    $obj = json_decode($result);                      
+    $obj = json_decode($result);    
+
     $entites= $obj->test;
 
     $code =  $obj->code;
 
     if($code ==200)
         {    
-             
-            
             require_once('composant/suppression_un/view/reponse_positive.php');
+
         }
-        else
+    else
         {
             echo  $texts;  
         }

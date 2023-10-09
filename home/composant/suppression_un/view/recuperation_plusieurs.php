@@ -11,8 +11,6 @@
 	</li>
 </ol>
 
-								
-		
 		<br />
 		
 		<script type="text/javascript">
@@ -36,12 +34,19 @@
 			<thead>
 				<tr>
 					<TH>#</TH>
+
 					<TH>text</TH>
+
 					<TH>Select</TH>
+
 					<TH>date</TH>
+
 					<TH>Telephone</TH>
+
 					<TH>Email</TH>
+
 					<TH>Radio</TH>
+
 					<TH></TH>
 	
 				</tr>
@@ -78,12 +83,19 @@
             <thead>
 				<tr>
                     <TH>#</TH>
+
 					<TH>text</TH>
+
 					<TH>Select</TH>
+
 					<TH>date</TH>
+
 					<TH>Telephone</TH>
+
 					<TH>Email</TH>
+
 					<TH>Radio</TH>
+					
 					<TH></TH>
 	
 				</tr>

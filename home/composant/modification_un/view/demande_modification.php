@@ -43,11 +43,6 @@
 							</div>
 					</div>
 
-				
-					
-
-
-					
 					<div class="form-group">		
 						<label class="col-sm-3 control-label">Select<abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
@@ -86,7 +81,6 @@
 							</div>
 					</div>
 
-
 					<div class="form-group">		
 						<label class="col-sm-3 control-label">E-mail<abbr style="color:green; font-size:15px;">**</abbr></label>			
 							<div class="col-sm-5">
@@ -97,9 +91,6 @@
 								</div>
 							</div>
 					</div>
-                
-
-
                 
 					<div class="form-group">	
 							<div  >
@@ -133,15 +124,12 @@
 							
 					</div>
 
-
-
-
-                        <div class="form-group"> 
+                    <div class="form-group"> 
                             <div class="col-sm-offset-3 col-sm-5"> 
                                 <div class="radio"> 
                                     <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Radio Input 1
-                             </label> 
-                        </div>
+                             		</label> 
+                        		</div>
                         <div class="radio">
                             <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio Input 2
                           </label>   

@@ -1,9 +1,8 @@
 <?php
 
-$uri =  $authority.'/entites/';
-   
-
-$result=curl_get($uri, $token);
+    $uri =  $authority.'/entites/';
+    
+    $result=curl_get($uri, $token);
 
     $obj = json_decode($result);                      
     
@@ -15,7 +14,7 @@ $result=curl_get($uri, $token);
         {   
             require_once('composant/suppression_un/view/recuperation_plusieurs.php'); 
         }
-        else
+    else
         {
             echo "verifier le code sources ";  
         }

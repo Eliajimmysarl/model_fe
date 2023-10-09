@@ -25,11 +25,11 @@
         
     if($code ==201)
         {   
-                require_once('composant/ajout_plusieurs/view/reponse_positive.php'); 
+            require_once('composant/ajout_plusieurs/view/reponse_positive.php'); 
         }
     else    
         {
-                require_once('composant/ajout_plusieurs/view/reponse_negative.php');   
+            require_once('composant/ajout_plusieurs/view/reponse_negative.php');   
         }
    
 ?>

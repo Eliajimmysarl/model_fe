@@ -28,11 +28,15 @@
 										<tr>
 										
 										<td>Text :</td><td>". $texte ." </td>
+
 										<tr><td>Select : </td><td> " . $selec." </td>
 		
 										<tr><td>Date : </td><td> ". $dates." </td>
+
 										<tr><td>Telephone : </td><td> ". $telephone." </td>
+
 										<tr><td>Email : </td><td> ". $email." </td>
+										
 										<tr><td>radio: </td><td> ". $optionsRadios." </td>
 										
 										

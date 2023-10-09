@@ -11,12 +11,9 @@
 	</li>
 </ol>
 
-
 <div class="col-md-12">
 	<div class="alert alert-success"><strong>Success !!!</strong> Votre demande de suppression de text est executée avec success.</div>
 </div>
 
-						
-		
 		<br />
 	

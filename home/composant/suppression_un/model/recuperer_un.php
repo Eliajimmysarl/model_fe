@@ -1,10 +1,10 @@
 <?php
 
-$id=$_GET['id'];
+    $id=$_GET['id'];
 
-$uri = $authority."/entites/".$id;
+    $uri = $authority."/entites/".$id;
 
-$result=curl_get($uri, $token);
+    $result=curl_get($uri, $token);
 
     $obj = json_decode($result);
                       
@@ -26,15 +26,14 @@ $result=curl_get($uri, $token);
             
             $optionsRadios=$entites[0]->optionsRadios;
             
-
             $id=$entites[0]->id;
         
             require_once('composant/suppression_un/view/demande_suppression.php'); 
-    }
-else if ($code ==400)
-    {
+        }
+    else if ($code ==400)
+        {
         echo $result; 
-    }
+        }
 
 
 

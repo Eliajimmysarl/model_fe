@@ -23,7 +23,7 @@
         
     if($code ==200)
         {   
-                require_once('composant/suppression_plusieurs/view/reponse.php'); 
+            require_once('composant/suppression_plusieurs/view/reponse.php'); 
         }
   
    

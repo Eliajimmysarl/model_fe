@@ -33,7 +33,7 @@
         
     if($code ==200)
         {   
-                require_once('composant/modification_plusieurs/view/reponse.php'); 
+            require_once('composant/modification_plusieurs/view/reponse.php'); 
         }
   
    

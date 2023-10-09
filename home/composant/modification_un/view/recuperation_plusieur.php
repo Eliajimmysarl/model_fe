@@ -38,11 +38,17 @@
 				    <TH>#</TH>
 					
 					<th>text</th>
+
 					<th>Select</th>
+
 					<th >date</th>
+
 					<th >Telephone</th>
+
 					<th >Email</th>
+
 					<th >Radio</th>
+
 					<th></th>
 	
 				</tr>
@@ -56,11 +62,17 @@
 					echo"                         
                			 <tr class='odd gradeX'>
 								<td>$i</td>
+
 					<td > " . $entites[$i]->texte ."</td>
+
 					<td>". $entites[$i]->selec ."</td>
+
 					<td>". $entites[$i]->dates ."</td>
+
 					<td>". $entites[$i]->telephone ."</td>
+
 					<td>". $entites[$i]->email ."</td>
+
 					<td>". $entites[$i]->optionsRadios ."</td>
 					
 					
@@ -74,14 +86,18 @@
 				<tr>
                 <TH>#</TH>
 					
-				
-					
 					<th>text</th>
+
 					<th>Select</th>
+
 					<th >date</th>
+
 					<th >Telephone</th>
+
 					<th >Email</th>
+
 					<th >Radio</th>
+
 					<th></th>
 	
 	
@@ -91,16 +107,6 @@
 		
 		<br />
 		
-	
-
-		
-	
-			
-		
-	
-
-
-
 
 
 	<!-- Imported styles on this page -->

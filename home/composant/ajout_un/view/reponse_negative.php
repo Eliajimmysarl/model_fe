@@ -65,8 +65,6 @@
 									</div>
 							</div>
 		
-							
-		
 							<div class="form-group">		
 								<label class="col-sm-3 control-label">E-mail</label>			
 									<div class="col-sm-5">
@@ -88,7 +86,6 @@
 										</div>
 									</div>
 							</div>
-
 
 							<div class="form-group">		
 								<label class="col-sm-3 control-label">Role</label>			
